@@ -33,6 +33,9 @@ class HStoreDescriptor(object):
 class SerializedDictDescriptor(object):
     _DictClass = dict
 
+    def __init__(self, field):
+        self.field = field
+
     def __get__(self, obj, type=None):
         if obj is None:
             return self
