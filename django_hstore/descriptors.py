@@ -12,7 +12,7 @@ __all__ = [
 class HStoreDescriptor(object):
     _DictClass = HStoreDict
 
-    def __init__(self, field):
+    def __init__(self, field, **kwargs):
         self.schema_mode = kwargs.pop('schema_mode', False)
         self.field = field
 
