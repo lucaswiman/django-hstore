@@ -14,7 +14,6 @@ class HStoreDescriptor(object):
 
     def __init__(self, *args, **kwargs):
         self.schema_mode = kwargs.pop('schema_mode', False)
-        super(HStoreDescriptor, self).__init__(*args, **kwargs)
 
     def __get__(self, obj, type=None):
         if obj is None:
